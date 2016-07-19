@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="public/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="public/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script type="text/javascript" src="public/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="public/bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="public/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="public/jquery.json.js"></script>
+    <script type="text/javascript" src="public/touchslider.dev.js"></script>
+    <script type="text/javascript" src="public/common.js"></script>
+    <title>TPshop</title>
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div id="logo">
+        <div class="left">
+            <img src="images/top1.png" alt=""/>
+        </div>
+        <p>TPshop</p>
+        <div class="right">
+            <img src="images/top2.png" alt=""/>
+        </div>
+    </div>
+</div>
+<a href="" id="top"></a>
+<!--主体部分-->
+<!--轮播图-->
+<div id="scrolling" class="scrolling">
+    <div class="bd">
+        <ul>
+            <li><a href=""><img src="images/scroll1.jpg" alt="" width="100%"/></a></li>
+            <li><a href=""><img src="images/scroll2.jpg" alt="" width="100%"/></a></li>
+        </ul>
+    </div>
+    <div class="hd" style="display: none">
+        <ul></ul>
+    </div>
+</div>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#scrolling",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>
+<!--搜索-->
+<div  id="search" >
+    <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="请输入您所搜索的商品"></ul>
+</div>
+<!--导航-->
+<div class="entry-list clearfix">
+    <nav>
+        <ul>
+            <li>
+                <a href="menu.html">
+                    <img alt="全部分类" src="images/list1.png" />
+                    <span>全部分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img alt="我的订单" src="images/list2.png" />
+                    <span>我的订单</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img alt="购物车" src="images/list3.png" />
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img alt="个人中心" src="images/list4.png" />
+                    <span>个人中心</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--商品瀑布-->
+<div class="floor_images">
+    <dl>
+        <dt>
+            <a href="">
+                <img src="images/demolist1.jpg" width="1" height="1" border="0">
+            </a>
+        </dt>
+        <dd>
+                    <span class="Edge">
+                        <a href="">
+                            <img src="images/demolist2.jpg" width="1" height="1" border="0">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="">
+                            <img src="images/demolist3.jpg" width="1" height="1" border="0">
+                        </a>
+                    </span>
+        </dd>
+    </dl>
+    <ul>
+        <li class="brom">
+            <a href="">
+                <img src="images/demolist4.jpg" width="1" height="1" border="0">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="images/demolist5.jpg" width="1" height="1" border="0">
+            </a>
+        </li>
+    </ul>
+</div>
+<!--促销商品-->
+<div class="index_floor_lou">
+    <div class="floor_body">
+        <h2>
+            <em></em>促销商品
+            <div class="geng">
+                <a href="">更多</a><span></span>
+            </div>
+        </h2>
+        <div id="scroll_promotion">
+            <ul>
+                <li>
+                    <div class="index_pro">
+                        <a href="" title="小米旗舰店正品手机平板通用迷你充电宝 移动电源10000毫安大容量">
+                            <div class="products_kuang">
+                                <div class="timerBox" id="surplus_text119">1时 59分 59秒</div>
+                                <img src="images/cuxiao1.jpeg" alt=""/>
+                            </div>
+                            <div class="goods_name">
+                                <a href="" class="goods_name_a">小米旗舰店正品手机平板通用迷你充电宝 移动电源10000毫安大容量</a>
+                            </div>
+                        </a>
+                        <div class="price">
+                            <a href="" class="btns">
+                                <img src="images/gouwu.png" alt=""/>
+                            </a>
+                            <span class="price_pro">￥59.00元</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="index_pro">
+                        <a href="" title="三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待">
+                            <div class="products_kuang">
+                                <div class="timerBox" id="surplus_text141">1时 59分 59秒</div>
+                                <img src="images/cuxiao2.jpeg">
+                            </div>
+                            <div class="goods_name">
+                                <a href="" class="goods_name_a">三星 Galaxy A9高配版 (A9100) 精灵黑 全网通4G手机 双卡双待</a>
+                            </div>
+                        </a>
+                        <div class="price">
+                            <a href="" class="btns">
+                                <img src="images/gouwu.png">
+                            </a>
+                            <span class="price_pro">￥3400.00元</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="index_pro">
+                        <a href="" title="靓号0元送广东联通4G/3G手机卡上网卡大流量套餐全国无漫游选号">
+                            <div class="products_kuang">
+                                <div class="timerBox" id="surplus_text136">1时 59分 59秒</div>
+                                <img src="images/cuxiao3.jpeg">
+                            </div>
+                            <div class="goods_name">
+                                <a href="" class="goods_name_a">靓号0元送广东联通4G/3G手机卡上网卡大流量套餐全国无漫游选号</a>
+                            </div>
+                        </a>
+                        <div class="price">
+                            <a href="" class="btns">
+                                <img src="images/gouwu.png">
+                            </a>
+                            <span class="price_pro">￥50.00元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--商品瀑布-->
+<div class="floor_images">
+    <dl>
+        <dt>
+            <a href="" >
+                <img src="images/demolist6.jpg" width="1" height="1" border="0">
+            </a>
+        </dt>
+        <dd>
+                <span class="Edge">
+                    <a href="" >
+                        <img src="images/demolist7.jpg" width="1" height="1" border="0">
+                    </a>
+                </span>
+                <span>
+                    <a href="" >
+                        <img src="images/demolist8.jpg" width="1" height="1" border="0">
+                    </a>
+                </span>
+        </dd>
+    </dl>
+    <strong>
+        <a href="" >
+            <img src="images/demolist9.jpg" width="1" height="1" border="0">
+        </a>
+    </strong>
+</div>
+<!--精品推荐-->
+<div class="index_floor">
+    <div class="floor_body1">
+        <h2>
+            <em></em>精品推荐
+            <div class="geng">
+                <a href="">更多</a><span></span>
+            </div>
+        </h2>
+        <div id="scroll_best"  class="scroll_hot">
+            <div class="bd">
+                    <ul>
+                        <li>
+                            <a href="" title="迎馨家纺全棉斜纹印花双人四件套邂逅 AB版纯棉，亲肤透气"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin1.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">迎馨家纺全棉斜纹印花双人四件套邂逅 AB版纯棉，亲肤透气</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥110.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="华为（HUAWEI） M2 10.0 平板电脑 WiFi 月光银"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin2.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">华为（HUAWEI） M2 10.0 平板电脑 WiFi 月光银</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥2288.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="荣耀X2 标准版 双卡双待双通 移动/联通双4G 16GB ROM（月光银）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingping3.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">荣耀X2 标准版 双卡双待双通 移动/联通双4G 16GB ROM（月光银）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <ul>
+                        <li>
+                            <a href="" title="华为（HUAWEI） M2 8英寸平板电脑（1920×1200 IPS屏 海思麒麟930 16GB WiFi）香槟金"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin4.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">华为（HUAWEI） M2 8英寸平板电脑（1920×1200 IPS屏 海思麒麟930 16GB WiFi）香槟金</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1588.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="Teclast/台电 X80 Plus WIFI 32GB Win10平板电脑双系统8英寸"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin5.png" alt=""/>
+                                </div>
+                                <div class="goods_name">Teclast/台电 X80 Plus WIFI 32GB Win10平板电脑双系统8英寸</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥499.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="荣耀畅玩平板note 9.6英寸平板电脑 移动/联通双4G LTE版"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin6.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">荣耀畅玩平板note 9.6英寸平板电脑 移动/联通双4G LTE版</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥110.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="" title="荣耀平板 8.0英寸平板电脑（Wi-Fi版 四核1.2GHz处理器 1GB内存 8GB存储）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin7.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">荣耀平板 8.0英寸平板电脑（Wi-Fi版 四核1.2GHz处理器 1GB内存 8GB存储）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥799.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin8.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="【北京移动老用户专享 话费六折】荣耀畅玩5X 双卡双待 移动版 智能手机（破晓银）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin9.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">【北京移动老用户专享 话费六折】荣耀畅玩5X 双卡双待 移动版 智能手机（破晓银）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="hd">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#scroll_best",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>
+<!--新品上市-->
+<div class="index_floor">
+    <div class="floor_body1">
+        <h2>
+            <em></em>新品上市
+            <div class="geng">
+                <a href="">更多</a><span></span>
+            </div>
+        </h2>
+        <div id="scroll_new"  class="scroll_hot">
+            <div class="bd">
+                    <ul>
+                        <li>
+                            <a href="" title="迎馨家纺全棉斜纹印花双人四件套邂逅 AB版纯棉，亲肤透气"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin1.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">迎馨家纺全棉斜纹印花双人四件套邂逅 AB版纯棉，亲肤透气</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥110.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="迎馨家纺 全棉斜纹印花双人四件套 约定 桔色 1.5米床"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/xinpin1.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">迎馨家纺 全棉斜纹印花双人四件套 约定 桔色 1.5米床</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥100.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="韩文2015冬装新款女装红色双排扣配腰带毛呢大衣."></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/xinpin2.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">韩文2015冬装新款女装红色双排扣配腰带毛呢大衣.</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥0.01元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="" title="红衣主角2015冬装新款走秀款大气简约黄色羊毛呢大衣."></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/xinpin3.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">红衣主角2015冬装新款走秀款大气简约黄色羊毛呢大衣.</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥399.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="珂兰钻石 18K金90分效果群镶钻石戒指 倾城 需定制"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/xinpin4.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">珂兰钻石 18K金90分效果群镶钻石戒指 倾城 需定制</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="小米手机5,十余项黑科技，很轻狠快"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/xinpin5.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">小米手机5,十余项黑科技，很轻狠快</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="" title="Apple iPhone 6s Plus 16G 玫瑰金 移动联通电信4G手机"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/xinpin6.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">Apple iPhone 6s Plus 16G 玫瑰金 移动联通电信4G手机</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥799.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin8.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="【北京移动老用户专享 话费六折】荣耀畅玩5X 双卡双待 移动版 智能手机（破晓银）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin9.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">【北京移动老用户专享 话费六折】荣耀畅玩5X 双卡双待 移动版 智能手机（破晓银）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="hd">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#scroll_new",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>
+<!--热销商品-->
+<div class="index_floor">
+    <div class="floor_body1">
+        <h2>
+            <em></em>精品推荐
+            <div class="geng">
+                <a href="">更多</a><span></span>
+            </div>
+        </h2>
+        <div id="scroll_crazy"  class="scroll_hot">
+            <div class="bd">
+                    <ul>
+                        <li>
+                            <a href="" title="迎馨家纺全棉斜纹印花双人四件套邂逅 AB版纯棉，亲肤透气"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin1.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">迎馨家纺全棉斜纹印花双人四件套邂逅 AB版纯棉，亲肤透气</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥110.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="华为（HUAWEI） M2 10.0 平板电脑 WiFi 月光银"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin2.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">华为（HUAWEI） M2 10.0 平板电脑 WiFi 月光银</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥2288.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="荣耀X2 标准版 双卡双待双通 移动/联通双4G 16GB ROM（月光银）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingping3.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">荣耀X2 标准版 双卡双待双通 移动/联通双4G 16GB ROM（月光银）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="" title="华为（HUAWEI） M2 8英寸平板电脑（1920×1200 IPS屏 海思麒麟930 16GB WiFi）香槟金"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin4.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">华为（HUAWEI） M2 8英寸平板电脑（1920×1200 IPS屏 海思麒麟930 16GB WiFi）香槟金</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1588.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="Teclast/台电 X80 Plus WIFI 32GB Win10平板电脑双系统8英寸"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin5.png" alt=""/>
+                                </div>
+                                <div class="goods_name">Teclast/台电 X80 Plus WIFI 32GB Win10平板电脑双系统8英寸</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥499.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="荣耀畅玩平板note 9.6英寸平板电脑 移动/联通双4G LTE版"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin6.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">荣耀畅玩平板note 9.6英寸平板电脑 移动/联通双4G LTE版</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥110.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="" title="荣耀平板 8.0英寸平板电脑（Wi-Fi版 四核1.2GHz处理器 1GB内存 8GB存储）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin7.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">荣耀平板 8.0英寸平板电脑（Wi-Fi版 四核1.2GHz处理器 1GB内存 8GB存储）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥799.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin8.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥1999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" title="【北京移动老用户专享 话费六折】荣耀畅玩5X 双卡双待 移动版 智能手机（破晓银）"></a>
+                            <div class="index_pro">
+                                <div class="products_kuang">
+                                    <img src="images/jingpin9.jpeg" alt=""/>
+                                </div>
+                                <div class="goods_name">【北京移动老用户专享 话费六折】荣耀畅玩5X 双卡双待 移动版 智能手机（破晓银）</div>
+                                <div class="price">
+                                    <a href="" class="btns">
+                                        <img src="images/gouwu.png">
+                                    </a>
+                                    <span href="" class="price_pro">￥999.00元</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="hd">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#scroll_crazy",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>
+<!--更多-->
+<div class="index_floor_lou">
+    <div class="floor_body">
+        <h2>
+            <em></em>
+            <div class="geng">
+                <a href="" >更多</a>
+                <span></span>
+            </div>
+        </h2>
+    </div>
+</div>
+<!--图片轮播-->
+<div id="photoscroll" class="photoscroll">
+    <div class="bd">
+        <ul>
+            <li><a href=""><img src="images/tupianlunbo1.jpg" alt="" width="100%"/></a></li>
+            <li><a href=""><img src="images/tupianlunbo2.jpg" alt="" width="100%"/></a></li>
+        </ul>
+    </div>
+    <div class="hd" style="display: none">
+        <ul></ul>
+    </div>
+</div>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#photoscroll",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>
+<!--猜你喜欢-->
+<div class="floor_body2" >
+    <h2>————&nbsp;猜你喜欢&nbsp;————</h2>
+    <div id="J_ItemList">
+        <ul class="product single_item info">
+            <li>
+                <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                <div class="index_pro">
+                    <div class="products_kuang">
+                        <img src="images/jingpin8.jpeg" alt=""/>
+                    </div>
+                    <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                    <div class="price">
+                        <a href="" class="btns">
+                            <img src="images/gouwu.png">
+                        </a>
+                        <span href="" class="price_pro">￥1999.00元</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                <div class="index_pro">
+                    <div class="products_kuang">
+                        <img src="images/jingpin8.jpeg" alt=""/>
+                    </div>
+                    <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                    <div class="price">
+                        <a href="" class="btns">
+                            <img src="images/gouwu.png">
+                        </a>
+                        <span href="" class="price_pro">￥1999.00元</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                <div class="index_pro">
+                    <div class="products_kuang">
+                        <img src="images/jingpin8.jpeg" alt=""/>
+                    </div>
+                    <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                    <div class="price">
+                        <a href="" class="btns">
+                            <img src="images/gouwu.png">
+                        </a>
+                        <span href="" class="price_pro">￥1999.00元</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                <div class="index_pro">
+                    <div class="products_kuang">
+                        <img src="images/jingpin8.jpeg" alt=""/>
+                    </div>
+                    <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                    <div class="price">
+                        <a href="" class="btns">
+                            <img src="images/gouwu.png">
+                        </a>
+                        <span href="" class="price_pro">￥1999.00元</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                <div class="index_pro">
+                    <div class="products_kuang">
+                        <img src="images/jingpin8.jpeg" alt=""/>
+                    </div>
+                    <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                    <div class="price">
+                        <a href="" class="btns">
+                            <img src="images/gouwu.png">
+                        </a>
+                        <span href="" class="price_pro">￥1999.00元</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                <div class="index_pro">
+                    <div class="products_kuang">
+                        <img src="images/jingpin8.jpeg" alt=""/>
+                    </div>
+                    <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                    <div class="price">
+                        <a href="" class="btns">
+                            <img src="images/gouwu.png">
+                        </a>
+                        <span href="" class="price_pro">￥1999.00元</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                <div class="index_pro">
+                    <div class="products_kuang">
+                        <img src="images/jingpin8.jpeg" alt=""/>
+                    </div>
+                    <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                    <div class="price">
+                        <a href="" class="btns">
+                            <img src="images/gouwu.png">
+                        </a>
+                        <span href="" class="price_pro">￥1999.00元</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="" title="华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）"></a>
+                <div class="index_pro">
+                    <div class="products_kuang">
+                        <img src="images/jingpin8.jpeg" alt=""/>
+                    </div>
+                    <div class="goods_name">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-LTE /TD-LTE/CDMA2000/GSM（麦芒金）</div>
+                    <div class="price">
+                        <a href="" class="btns">
+                            <img src="images/gouwu.png">
+                        </a>
+                        <span href="" class="price_pro">￥1999.00元</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <a href="" class="get_more" style="text-align:center; display:block;">
+            <img src='images/loader.gif' style="width:12px;height: 12px;">
+        </a>
+    </div>
+    <div id="getmore" style="font-size:.24rem;text-align: center;color:#888;padding:.25rem .24rem .4rem;">
+        <a href="" onClick="">点击加载</a>
+    </div>
+</div>
+<!--脚注-->
+<div class="footer">
+    <div class="links">
+        <ul>
+            <li>
+                <a href=""><span>登录</span></a>
+            </li>
+            <li>
+                <a href=""><span>注册</span></a>
+            </li>
+            <li>
+                <a href=""><span>反馈</span></a>
+            </li>
+            <li>
+                <a href=""><span>帮助</span></a>
+            </li>
+        </ul>
+    </div>
+    <p class="own">文章版权所有，并保留所有权利,文章版权所有，并保留所有权利,文章版权所有，并保留所有权利</p>
+</div>
+<!--回到顶部-->
+<a title="回到顶部" id="back-to-top" href="#top"><img src="images/topup.png" alt=""/></a>
+<script>
+    $(function(){
+        $(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop()>10){
+                    $("#back-to-top").fadeIn(1500);
+                }
+                else{
+                    $("#back-to-top").fadeOut(1500);
+                }
+            });
+            $("#back-to-top").click(function(){
+                $("body,html").animate({scrollTop:0},1000);
+                return false;
+            })
+        })
+    })
+</script>
+<!--底部-->
+<div style="height:50px; line-height:50px; clear:both;"></div>
+<div class="v_nav">
+    <div class="vf_nav">
+        <ul>
+            <li> <a href="">
+                <i class="vf_1"><img src="images/footer1.png" alt=""/></i>
+                <span></span></a></li>
+            <li><a href="">
+                <i class="vf_2"><img src="images/footer2.png" alt=""/></i>
+                <span></span></a></li>
+            <li><a href="">
+                <i class="vf_3"><img src="images/footer3.png" alt=""/></i>
+                <span></span></a></li>
+            <li>
+                <a href="">
+                    <i class="vf_4"><img src="images/footer4.png" alt=""/></i>
+                    <span></span>
+                </a>
+            </li>
+            <li><a href="">
+                <i class="vf_5"><img src="images/footer5.png" alt=""/></i>
+                <span></span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
